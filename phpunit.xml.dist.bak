@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit colors="true"
+         stopOnFailure="true"
+         bootstrap="tests/bootstrap.php"
+         beStrictAboutCoversAnnotation="true"
+         verbose="true">
+
+	<testsuites>
+		<testsuite name="Test Suite">
+			<directory>tests/src</directory>
+		</testsuite>
+	</testsuites>
+
+	<filter>
+		<whitelist processUncoveredFilesFromWhitelist="true">
+			<directory>src</directory>
+		</whitelist>
+	</filter>
+
+	<php>
+	  <env name="FABRICS_API" value="https://api.test.com/" />
+	  <env name="FABRICS_SLUG" value="yourFabricsSlugGoesHere" />
+	  <env name="FABRIC_NUMBER" value="00000" />
+	</php>
+
+	<logging>
+		<log type="coverage-text"   target="php://stdout" showUncoveredFiles="true" />
+		<log type="coverage-clover" target="tests/logs/clover.xml"/>
+		<log type="coverage-html"   target="tests/logs/html/"/>
+		<log type="testdox-html"    target="tests/logs/testdox.html"/>
+		<log type="testdox-text"    target="tests/logs/testdox.txt"/>
+	</logging>
+</phpunit>

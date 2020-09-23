@@ -1,0 +1,56 @@
+{
+    "name": "germania/response-decoder",
+    "description": "Interface and Trait for API response decoder",
+
+    "license": "MIT",
+
+    "authors": [
+        {
+            "name":  "Carsten Witt",
+            "email": "carsten.witt@germania-kg.com",
+            "role":  "Developer"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "Germania\\ResponseDecoder\\": "src"
+        }
+    },
+
+    "require": {
+        "php": "^7.1",
+        "psr/http-message": "^1.0",
+        "germania-kg/jsondecoder": "^1.0"
+    },
+
+
+
+    "autoload-dev": {
+          "psr-4": {
+            "tests\\": "tests/src"
+          }
+    },
+
+    "require-dev": {
+        "php": "^7.3",
+        "phpunit/phpunit": "^9.0",
+        "phpspec/prophecy-phpunit": "^2.0",
+        "php-coveralls/php-coveralls": "^2.0",
+        "friendsofphp/php-cs-fixer": "^2.0",
+        "spatie/phpunit-watcher": "^1.0"
+    },
+
+
+    "scripts": {
+        "phpcs":       "php-cs-fixer fix --verbose --diff --dry-run src/",
+        "phpcs-apply": "php-cs-fixer fix --verbose --diff src/",
+        "phpunit": "phpunit --colors=auto --coverage-text",
+        "watch": "phpunit-watcher watch",
+        "test": [
+            "@phpcs",
+            "@phpunit"
+        ]
+    }
+
+}
