@@ -12,7 +12,7 @@
 ## Installation
 
 ```bash
-$ composer require germania/response-decoder
+$ composer require germania-kg/response-decoder
 ```
 
 
