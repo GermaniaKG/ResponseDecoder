@@ -1,5 +1,5 @@
 {
-    "name": "germania/response-decoder",
+    "name": "germania-kg/response-decoder",
     "description": "Interface and Trait for API response decoder",
 
     "license": "MIT",
